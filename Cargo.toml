@@ -1,0 +1,18 @@
+[workspace]
+members = ["client", "trster", "types"]
+resolver = "2"
+
+[[bin]]
+name = "trst_client"
+path = "client/src/main.rs"
+
+[package]
+name = "trst"
+version = "0.1.0"
+authors = ["Przemysław Fuchs <fuchs.przemyslaw@gmail.com>"]
+
+[dependencies]
+iced = {git = "https://github.com/iced-rs/iced", rev = "77c8380"}
+iced_native ={ git = "https://github.com/iced-rs/iced", rev = "77c8380" }
+postcard = {version  ="1.0.2", features=["alloc"]}
+trst_types ={ path="types" }
